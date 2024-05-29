@@ -1,0 +1,71 @@
+1. Izvēlieties sadalīšanas operācijas.
+a) /
+b) ||
+c) or
+d) //
+Atbildes: a, d
+
+2. Kā Python valodā var palielināt mainīgo X par 1?
+a) X++
+b) X += 1
+c) X = X + 1
+d) X + 1
+Atbildes: b, c
+
+3. Izvēlieties derīgus mainīgo nosaukumus.
+a) 1st_mainigais
+b) pirmais-mainīgais
+c) mainigais
+d) pirmais_mainigais
+Atbildes: c, d
+
+4. Izvēlieties metodes, kuras var izmantot darbam ar String.
+a) .append()
+b) .strip()
+c) .upper()
+d) .add()
+Atbildes: c, b
+
+5. Kuri no sekojošajiem operatoriem ir salīdzināšanas operatori?
+a) ==
+b) !=
+c) **
+d) /
+Atbildes: a, b
+
+6. Kuri no sekojošajiem operatoriem tiek izmantoti loģiskai operācijai?
+a) and
+b) &&
+c) or
+d) not
+Atbildes: a, c
+
+7. Izvēlieties simbolus, kas ļauj rakstīt komentārus.
+a) ""
+b) ''
+c) #
+d) /**/
+Atbildes:  b, c
+
+8. Kuri no sekojošajiem ir derīgi boolean vērtības?
+a) True
+b) true
+c) No
+d) False
+Pareizās atbildes: a, d
+
+9. Kuri no sekojošajiem operatoriem ir piešķiršanas operatori?
+a) :=
+b) +=
+c) ==
+d) -=
+Atbildes: b, d
+
+10. Kuras no sekojošajām funkcijām pārbauda mainīgā tipu?
+a) type()
+b) isinstance()
+c) checktype()
+d) gettype()
+Atbildes: a, b
+
+
