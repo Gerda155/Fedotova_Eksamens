@@ -40,12 +40,12 @@ c) or
 d) not
 Atbildes: a, c
 
-7. Izvēlieties simbolus, kas ļauj rakstīt komentārus.
-a) ""
-b) ''
-c) #
-d) /**/
-Atbildes:  b, c
+7. Kuri no sekojošajiem datu tipie ir ciparu datu tipi?
+a) int
+b) bool
+c) str
+d) complex
+Atbildes:  a, d
 
 8. Kuri no sekojošajiem ir derīgi boolean vērtības?
 a) True
