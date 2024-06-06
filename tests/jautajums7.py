@@ -4,12 +4,12 @@ from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.checkbox import CheckBox
 from kivy.uix.button import Button
 from kivy.uix.widget import Widget
-from kivy.core.window import Window
-from kivy.properties import NumericProperty
+from kivy.properties import NumericProperty, BooleanProperty
 from jautajums8 import QuestionScreen8
 
 class QuestionScreen7(App):
     punkti = NumericProperty(0)
+    first_attempt = BooleanProperty(True) 
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
@@ -18,6 +18,7 @@ class QuestionScreen7(App):
     def __init__(self, punkti, **kwargs):
         super().__init__(**kwargs)
         self.punkti = punkti
+        self.first_attempt = True
         self.question = Label(
             text='Kuri no sekojošajiem datu tipie ir ciparu datu tipi?',
             font_size='20sp',
@@ -77,19 +78,20 @@ class QuestionScreen7(App):
     def submit_answer(self, instance):
         is_correct = self.checkbox1.active and self.checkbox4.active and not self.checkbox2.active and not self.checkbox3.active
         
-        if is_correct:
+        if is_correct and self.first_attempt:
             self.punkti += 1
+            self.stop()
+            QuestionScreen8(punkti=self.punkti).run()
+        elif is_correct:
             self.stop()
             QuestionScreen8(punkti=self.punkti).run()
         else:
             self.error_label.text = 'Nepareiza atbilde, lūdzu mēģiniet vēlreiz.'
             self.clear_checkboxes()
+            self.first_attempt = False
 
     def clear_checkboxes(self):
         self.checkbox1.active = False
         self.checkbox2.active = False
         self.checkbox3.active = False
-        self.checkbox4.active = False
-
-if __name__ == "__main__":
-    QuestionScreen7(punkti=0).run()
+ 
