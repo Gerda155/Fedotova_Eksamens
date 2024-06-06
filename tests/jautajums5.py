@@ -8,11 +8,6 @@ from kivy.core.window import Window
 from kivy.properties import NumericProperty
 from jautajums6 import QuestionScreen6
 
-# Глобальные настройки
-Window.size = (400, 300)
-Window.clearcolor = (209/255, 130/255, 210/255, 1)
-Window.title = "Python tests - Question"
-
 class QuestionScreen5(App):
     punkti = NumericProperty(0)
 
@@ -24,7 +19,7 @@ class QuestionScreen5(App):
         super().__init__(**kwargs)
         self.punkti = punkti
         self.question = Label(
-            text='5. jaut?',
+            text='Kuri no sekojošajiem operatoriem ir salīdzināšanas operatori?',
             font_size='20sp',
             halign='center',
             valign='middle',
@@ -32,10 +27,10 @@ class QuestionScreen5(App):
         )
         self.question.bind(size=self.question.setter('text_size'))
         
-        self.checkbox1, self.checkbox1_layout = self.create_checkbox('Atbilde 1')
-        self.checkbox2, self.checkbox2_layout = self.create_checkbox('Atbilde 2')
-        self.checkbox3, self.checkbox3_layout = self.create_checkbox('Atbilde 3')
-        self.checkbox4, self.checkbox4_layout = self.create_checkbox('Atbilde 4')
+        self.checkbox1, self.checkbox1_layout = self.create_checkbox('==')
+        self.checkbox2, self.checkbox2_layout = self.create_checkbox('!=')
+        self.checkbox3, self.checkbox3_layout = self.create_checkbox('**')
+        self.checkbox4, self.checkbox4_layout = self.create_checkbox('/')
         
         self.submit_btn = Button(
             text='Iesniegt',

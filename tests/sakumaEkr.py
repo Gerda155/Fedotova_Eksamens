@@ -1,16 +1,14 @@
 from kivy.app import App
 from kivy.uix.label import Label
-from kivy.uix.textinput import TextInput
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.button import Button
 from kivy.uix.widget import Widget
 from kivy.core.window import Window
 from kivy.properties import NumericProperty
-from jautajums1 import *
+from jautajums1 import QuestionScreen
 
-# Глобальные настройки
 Window.size = (400, 300)
-Window.clearcolor = (209/255, 130/255, 210/255, 1)
+Window.clearcolor = (110/255, 55/255, 110/255, 1)
 Window.title = "Python tests"
 
 class MainScreen(App):

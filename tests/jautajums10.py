@@ -6,12 +6,7 @@ from kivy.uix.button import Button
 from kivy.uix.widget import Widget
 from kivy.core.window import Window
 from kivy.properties import NumericProperty
-#from jautajums10 import QuestionScreen10
-
-# Глобальные настройки
-Window.size = (400, 300)
-Window.clearcolor = (209/255, 130/255, 210/255, 1)
-Window.title = "Python tests - Question"
+from beiguEkrans import FinalScreen
 
 class QuestionScreen10(App):
     punkti = NumericProperty(0)
@@ -24,7 +19,7 @@ class QuestionScreen10(App):
         super().__init__(**kwargs)
         self.punkti = punkti
         self.question = Label(
-            text='10. jaut?',
+            text='Kuras no sekojošajām funkcijām pārbauda mainīgā tipu?',
             font_size='20sp',
             halign='center',
             valign='middle',
@@ -32,10 +27,10 @@ class QuestionScreen10(App):
         )
         self.question.bind(size=self.question.setter('text_size'))
         
-        self.checkbox1, self.checkbox1_layout = self.create_checkbox('Atbilde 1')
-        self.checkbox2, self.checkbox2_layout = self.create_checkbox('Atbilde 2')
-        self.checkbox3, self.checkbox3_layout = self.create_checkbox('Atbilde 3')
-        self.checkbox4, self.checkbox4_layout = self.create_checkbox('Atbilde 4')
+        self.checkbox1, self.checkbox1_layout = self.create_checkbox('type()')
+        self.checkbox2, self.checkbox2_layout = self.create_checkbox('isinstance()')
+        self.checkbox3, self.checkbox3_layout = self.create_checkbox('checktype()')
+        self.checkbox4, self.checkbox4_layout = self.create_checkbox('gettype()')
         
         self.submit_btn = Button(
             text='Iesniegt',
@@ -85,7 +80,7 @@ class QuestionScreen10(App):
         if is_correct:
             self.punkti += 1
             self.stop()
-            #QuestionScreen10(punkti=self.punkti).run()
+            FinalScreen(punkti=self.punkti).run()
         else:
             self.error_label.text = 'Nepareiza atbilde, lūdzu mēģiniet vēlreiz.'
             self.clear_checkboxes()

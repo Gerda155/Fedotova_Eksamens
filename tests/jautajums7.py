@@ -8,11 +8,6 @@ from kivy.core.window import Window
 from kivy.properties import NumericProperty
 from jautajums8 import QuestionScreen8
 
-# Глобальные настройки
-Window.size = (400, 300)
-Window.clearcolor = (209/255, 130/255, 210/255, 1)
-Window.title = "Python tests - Question"
-
 class QuestionScreen7(App):
     punkti = NumericProperty(0)
 
@@ -24,7 +19,7 @@ class QuestionScreen7(App):
         super().__init__(**kwargs)
         self.punkti = punkti
         self.question = Label(
-            text='7. jaut?',
+            text='Kuri no sekojošajiem datu tipie ir ciparu datu tipi?',
             font_size='20sp',
             halign='center',
             valign='middle',
@@ -32,10 +27,10 @@ class QuestionScreen7(App):
         )
         self.question.bind(size=self.question.setter('text_size'))
         
-        self.checkbox1, self.checkbox1_layout = self.create_checkbox('Atbilde 1')
-        self.checkbox2, self.checkbox2_layout = self.create_checkbox('Atbilde 2')
-        self.checkbox3, self.checkbox3_layout = self.create_checkbox('Atbilde 3')
-        self.checkbox4, self.checkbox4_layout = self.create_checkbox('Atbilde 4')
+        self.checkbox1, self.checkbox1_layout = self.create_checkbox('int')
+        self.checkbox2, self.checkbox2_layout = self.create_checkbox('bool')
+        self.checkbox3, self.checkbox3_layout = self.create_checkbox('str')
+        self.checkbox4, self.checkbox4_layout = self.create_checkbox('complex')
         
         self.submit_btn = Button(
             text='Iesniegt',
@@ -80,7 +75,7 @@ class QuestionScreen7(App):
         return box
 
     def submit_answer(self, instance):
-        is_correct = self.checkbox1.active and self.checkbox2.active and not self.checkbox3.active and not self.checkbox4.active
+        is_correct = self.checkbox1.active and self.checkbox4.active and not self.checkbox2.active and not self.checkbox3.active
         
         if is_correct:
             self.punkti += 1
