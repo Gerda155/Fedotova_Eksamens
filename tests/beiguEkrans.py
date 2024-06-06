@@ -2,7 +2,6 @@ from kivy.uix.button import Button
 from kivy.app import App
 from kivy.uix.label import Label
 from kivy.uix.boxlayout import BoxLayout
-from kivy.core.window import Window
 from kivy.properties import NumericProperty
 
 class FinalScreen(App):
@@ -12,7 +11,7 @@ class FinalScreen(App):
         super().__init__(**kwargs)
         self.punkti = punkti
 
-    def clear_points(self):
+    def clear_points(self, punkti):
         self.punkti = 0
         self.stop()
 

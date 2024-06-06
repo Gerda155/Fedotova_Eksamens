@@ -60,9 +60,12 @@ class QuestionScreen(App):
     def build(self):
         box = BoxLayout(orientation='vertical', padding=20, spacing=20)
         
-        top_spacer = Widget(size_hint_y=None, height=20)
+        top_spacer = Widget(size_hint_y=None, height=100)
         box.add_widget(top_spacer)
         box.add_widget(self.question)
+
+        checkbox_spacer = Widget(size_hint_y=None, height=50)
+        box.add_widget(checkbox_spacer)
         
         box.add_widget(self.checkbox1_layout)
         box.add_widget(self.checkbox2_layout)
@@ -73,6 +76,8 @@ class QuestionScreen(App):
         box.add_widget(mid_spacer)
         box.add_widget(self.submit_btn)
         box.add_widget(self.error_label)
+
+
         return box
 
     def submit_answer(self, instance):
