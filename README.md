@@ -9,8 +9,8 @@ Jūs varat apgūt mācību materiālu par tēmu "Mainīgie, to datu tipi, pamatd
 - 2 UML diagrammas
 
 ### Darba plāns:
-- [ ] Izveidot mācību materiālu
+- [x] Izveidot mācību materiālu
 - [x] Izdomāt jautājumus
-- [ ] Izveidot programmu
-- [ ] Izveidot UML diagrammas
-- [ ] Izveidot prezentāciju
+- [x] Izveidot programmu
+- [x] Izveidot UML diagrammas
+- [x] Izveidot prezentāciju
