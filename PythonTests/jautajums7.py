@@ -4,8 +4,13 @@ from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.checkbox import CheckBox
 from kivy.uix.button import Button
 from kivy.uix.widget import Widget
+from kivy.core.window import Window
 from kivy.properties import NumericProperty, BooleanProperty
 from jautajums8 import Jautajums_8
+
+Window.size = (550, 550)
+Window.clearcolor = (110/255, 55/255, 110/255, 1)
+Window.title = "Python tests - 7. jautājums"
 
 class Jautajums_7(App):
     punkti = NumericProperty(0)

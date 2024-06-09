@@ -9,7 +9,7 @@ from kivy.uix.image import Image
 import os
 from jautajums1 import Jautajums_1
 
-Window.size = (400, 400)
+Window.size = (550, 550)
 Window.clearcolor = (110/255, 55/255, 110/255, 1)
 Window.title = "Python tests"
 

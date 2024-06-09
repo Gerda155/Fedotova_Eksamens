@@ -7,7 +7,7 @@ from kivy.core.window import Window
 import os
 from kivy.uix.image import Image
 
-Window.size = (400, 400)
+Window.size = (550, 550)
 Window.clearcolor = (110/255, 55/255, 110/255, 1)
 Window.title = "Python tests - Rezultāti"
 
@@ -26,13 +26,13 @@ class Rezultats(App):
         box = BoxLayout(orientation='vertical', padding=20, spacing=20)
         
         if self.punkti <= 3:
-            image_path = source=os.path.join(os.path.dirname(__file__), 'images/minimun.png'),
+            image_path = os.path.join(os.path.dirname(__file__), 'images/minimun.png')
             message = 'Varēji arī labāk!'
         elif self.punkti > 3 and self.punkti <= 6:
-            image_path = source=os.path.join(os.path.dirname(__file__), 'images/medium.png'), 
+            image_path = os.path.join(os.path.dirname(__file__), 'images/medium.png')
             message = 'Labs rezultāts!'
         else:
-            image_path = source=os.path.join(os.path.dirname(__file__), 'images/maximum.png'), 
+            image_path = os.path.join(os.path.dirname(__file__), 'images/maximum.png')
             message = "Malacis!"
 
         result_image = Image(
