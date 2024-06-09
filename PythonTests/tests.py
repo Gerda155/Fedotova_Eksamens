@@ -6,6 +6,7 @@ from kivy.uix.widget import Widget
 from kivy.core.window import Window
 from kivy.properties import NumericProperty
 from kivy.uix.image import Image
+import os
 from jautajums1 import Jautajums_1
 
 Window.size = (400, 400)
@@ -37,7 +38,7 @@ class Tests(App):
         
     def build(self):
         sakumaImage = Image(
-            source='sillyCar.png',
+            source=os.path.join(os.path.dirname(__file__), 'images/sillyCar.png'),
             size_hint=(None, None),
             size=(200, 200),
             pos_hint={'center_x': 0.5}
